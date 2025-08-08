@@ -17,7 +17,7 @@ function fmtRange(sISO,eISO){
 export default function App(){
   const [active,setActive]=useState('home')
   const [city,setCity]=useState(cities[0].id)
-  const [profile,setProfile]=useState({ displayName:'RecyclingFan42', address:'123 Herzl St, Even Yehuda', destination:destinations[0].id })
+  const [profile,setProfile]=useState({ displayName:'RecyclingFan42', address:'50 Shomron, Even Yehuda', destination:destinations[0].id })
   const [confirmed,setConfirmed]=useState({})
   const upcoming = useMemo(()=> windows.filter(w=> w.city===city),[city])
 
