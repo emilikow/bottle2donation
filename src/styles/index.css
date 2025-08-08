@@ -2,15 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-/* ---------- Light, calm base ---------- */
+/* --- Base44-light palette (blue) --- */
 @layer base {
-  :root {
-  --bg: #f9fafb;           /* near-white background */
-  --text: #0f172a;         /* slate-900 */
-  --muted: #475569;        /* slate-600 */
-  --border: #e5e7eb;       /* gray-200 */
-  --primary: #2563eb;      /* blue-600 */
-  --primary-hover: #1d4ed8;/* blue-700 */
+  :root{
+    --bg:#f9fafb;
+    --text:#0f172a;
+    --muted:#475569;
+    --border:#e5e7eb;
+    --primary:#2563eb;       /* blue-600 */
+    --primary-hover:#1d4ed8; /* blue-700 */
+  }
 }
 
 
@@ -40,11 +41,11 @@
 
   /* buttons */
   .btn { @apply inline-flex items-center justify-center rounded-xl border border-slate-200 bg-white text-slate-900 px-4 py-2 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md; }
-  .btn-primary {
-  @apply font-semibold border-transparent text-white;
-  background: linear-gradient(180deg, var(--primary), var(--primary-hover));
-  box-shadow: 0 4px 14px -4px rgba(37,99,235,.4);
-}
+  .btn-primary{
+    @apply font-semibold border-transparent text-white;
+    background: linear-gradient(180deg, var(--primary), var(--primary-hover));
+    box-shadow: 0 6px 18px -8px rgba(37,99,235,.35);
+  }
   .btn-accent {
     @apply font-semibold border-transparent text-teal-950 shadow-lg;
     background: linear-gradient(180deg, theme(colors.accent.500), theme(colors.accent.600));
