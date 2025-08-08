@@ -35,7 +35,7 @@
   .btn.primary { @apply font-bold border-transparent; background:linear-gradient(180deg,#34d399,#10b981); color:#064e3b; box-shadow:0 8px 20px -8px rgba(16,185,129,.45); }
   .btn.ghost { @apply bg-slate-50; }
 
-  .grid { @apply grid grid-cols-12 gap-4; }
+  .layout-grid { @apply grid gap-4 grid-cols-12; }   /* renamed to avoid conflict */
   .card { @apply rounded-2xl p-5 bg-white border border-slate-200 shadow-sm; box-shadow: var(--tw-shadow), 0 12px 28px -18px rgba(2,6,23,.12), inset 0 1px 0 rgba(255,255,255,.6); }
   .hero { @apply rounded-2xl p-6 border border-slate-200 bg-white shadow-md; background: linear-gradient(180deg,#ffffff,#fbfdff); }
   .muted { @apply text-slate-600; }
