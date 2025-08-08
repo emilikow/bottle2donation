@@ -18,17 +18,22 @@ export default function Nav({active, setActive}){
           <span>Bottle</span><span className="text-brand">•</span><span>Donation</span>
           <span className="ml-2 px-2 py-[2px] rounded-full text-xs border border-slate-200 bg-indigo-50 text-slate-700">Beta</span>
         </div>
-        <nav className="ml-auto flex gap-2 flex-wrap">
-          {items.map(([key,label])=> (
-            <button
-              key={key}
-              className={'btn ' + (active===key? 'btn-primary': '')}
-              onClick={()=>setActive(key)}
-            >
-              {label}
-            </button>
-          ))}
-        </nav>
+        <nav className="ml-auto flex gap-2 whitespace-nowrap overflow-x-auto">
+  {tabs.map(([key, label]) => (
+    <button
+      key={key}
+      onClick={() => setActive(key)}
+      className={
+        "px-4 py-2 rounded-lg text-sm font-medium transition-colors " +
+        (active === key
+          ? "bg-blue-600 text-white shadow-sm"
+          : "bg-white border border-slate-200 text-slate-700 hover:bg-slate-50")
+      }
+    >
+      {label}
+    </button>
+  ))}
+</nav>
       </div>
     </header>
   )
